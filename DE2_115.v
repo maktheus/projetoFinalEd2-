@@ -493,11 +493,100 @@ begin
 			blueValue <= 8'b11111111;
 			greenValue <= 8'b11111111;
 		end
-		else if (YPixelPosition < 128 && XPixelPosition > 150 && XPixelPosition < 1420) //set top magenta border
-		begin
-			redValue <= 8'b11111111; 
-			blueValue <= 8'b11111111;
-			greenValue <= 8'b11111111;
+
+		else if (YPixelPosition < 128 && XPixelPosition > 150 && XPixelPosition < 1420) begin //set top magenta border
+			
+			if(XPixelPosition > 170 && XPixelPosition < 200) begin // draw a U in the top
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			else if(XPixelPosition > 220 && XPixelPosition < 250) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			else if(XPixelPosition > 170 && XPixelPosition < 250 && YPixelPosition < 128 &&  YPixelPosition > 90) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			else if(XPixelPosition > 280 && XPixelPosition < 310) begin // draw a F in the top
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			else if(XPixelPosition > 300 && XPixelPosition < 340 && YPixelPosition <30) begin 
+			
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			else if(XPixelPosition > 300 && XPixelPosition < 340 && YPixelPosition > 50 && YPixelPosition < 80 ) begin 
+			
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			//draw an A
+			else if(XPixelPosition > 370 && XPixelPosition < 400) begin
+				redValue <= 8'b11111111;
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			else if(XPixelPosition > 430 && XPixelPosition <460) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			else if(XPixelPosition > 370 && XPixelPosition <460 &&  YPixelPosition < 30) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			else if(XPixelPosition > 370 && XPixelPosition <460  && YPixelPosition > 50 && YPixelPosition < 80 ) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			//draw an M
+			else if(XPixelPosition > 490 && XPixelPosition < 520) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			else if(XPixelPosition > 550 && XPixelPosition < 580) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+			// primeira metade do 'V' invertido
+			else if(XPixelPosition > 520 && XPixelPosition < 535 && YPixelPosition > 30 && YPixelPosition < (30 + XPixelPosition - 520)) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+			// segunda metade do 'V' invertido
+			else if(XPixelPosition >= 535 && XPixelPosition < 550 && YPixelPosition > 30 && YPixelPosition < (80 - (XPixelPosition - 535))) begin
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b00000000;
+				greenValue <= 8'b11111111;
+			end
+
+
+			else begin	
+				redValue <= 8'b11111111; 
+				blueValue <= 8'b11111111;
+				greenValue <= 8'b11111111;
+					
+			end
 		end
 		else if (XPixelPosition < 1420 && XPixelPosition > 150 && YPixelPosition > 896) // set bottom magenta border
 		begin
@@ -505,6 +594,7 @@ begin
 			blueValue <= 8'b11111111;
 			greenValue <= 8'b11111111;
 		end
+
 		else if (XPixelPosition > P1x && XPixelPosition < P1x+25 && YPixelPosition > P1y && YPixelPosition < P1y+125) // draw player 1 paddle
 		begin
 			redValue <= 8'b11111111; 
@@ -526,6 +616,8 @@ begin
 			blueValue <= 8'b11111111;
 			greenValue <= 8'b11111111;
 		end
+		//draw a U in the top
+
 		else // default background is black
 		begin
 			redValue <= 8'b00000000; 
