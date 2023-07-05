@@ -3,11 +3,11 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -3.403
-TNS   : -3.403
+Slack : -3.611
+TNS   : -7.222
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : 15.818
+Slack : 15.767
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
@@ -15,11 +15,11 @@ Slack : 0.407
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.670
+Slack : 0.656
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.340
+Slack : 4.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -35,11 +35,11 @@ Slack : 16.000
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.211
-TNS   : -2.211
+Slack : -2.345
+TNS   : -4.690
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : 16.256
+Slack : 16.207
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
@@ -47,11 +47,11 @@ Slack : 0.364
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.614
+Slack : 0.599
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.322
+Slack : 4.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -67,11 +67,11 @@ Slack : 16.000
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.157
+Slack : 3.021
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : 17.865
+Slack : 17.844
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
@@ -79,7 +79,7 @@ Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.309
+Slack : 0.300
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGAFreq|altpll_component|auto_generated|pll1|clk[0]'
